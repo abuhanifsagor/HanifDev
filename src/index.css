@@ -1,2 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
 @plugin "daisyui";
+
+html,
+body {
+  scroll-behavior: smooth;
+  background-color: #f5f5f5;
+  scrollbar-width: thin;
+  scrollbar-track-color: #f5f5f5;
+  scrollbar-color: #899ae98e #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #899ae98e;
+}
+#PortfolioHero{
+background: #f5f5f5;
+border-radius: 16px;
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1), -10px -10px 10px #ffffff;
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+}
+
+#blob {
+  transition: border-radius  0.5s ease-in-out;
+}
