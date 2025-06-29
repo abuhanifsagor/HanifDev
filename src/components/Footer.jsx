@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <div>this is footer</div>;
+  return <div className="min-h-50">this is footer</div>;
 };
 
 export default Footer;

@@ -1,11 +1,11 @@
 import React from "react";
 import { IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io";
 import { TbBrandGithubFilled } from "react-icons/tb";
+import profile from "../assets/pp.jpg";
 
 const PortfolioHero = () => {
   return (
-    // https://dribbble.com/shots/25052680-Portfolioman-Personal-Portfolio-Landing-Page-Website
-    <section
+   <section
       data-aos="fade-up"
       id="PortfolioHero"
       className="relative mt-12 min-h-[60vh]  text-gray-800 font-sans flex items-center justify-center py-10 px-4 overflow-hidden"
@@ -60,7 +60,7 @@ const PortfolioHero = () => {
         style={{ borderRadius: "60% 40% 20% 80%" }}
       ></div>
       {/* Main Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center md:gap-12 lg:gap-24">
+      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center md:gap-12 lg:gap-24">
         {/* Left Section */}
         <div
           data-aos="zoom-out-right"
@@ -75,8 +75,8 @@ const PortfolioHero = () => {
               Work for money and code for love!
             </p>
             <p className="text-lg leading-relaxed">
-              I'm <span className=" text-blue-600 ">Abu Hanif Sagor</span>, a creative MERN Stack Developer based in
-              Bangladesh.{" "}
+              I'm <span className=" text-blue-600 ">Abu Hanif Sagor</span>, a
+              creative MERN Stack Developer based in Bangladesh.{" "}
             </p>
           </div>
 
@@ -149,7 +149,7 @@ const PortfolioHero = () => {
             }}
           >
             <img
-              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTEyL3Jhd3BpeGVsb2ZmaWNlMTBfYWR1bHRfaW5kaWFuX2xhdWdoaW5nX2FuZF9oYXZpbmdfZnVuX2luZGlhbl9idV8yNTNkNzMyYy03M2FiLTRlMDEtYTkwYy0zYjE1MGE2OTEzNWVfMS5wbmc.png "
+              src={profile}
               alt="Profile"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -179,67 +179,71 @@ const PortfolioHero = () => {
         {/* Right Section */}
         <div
           data-aos="zoom-out-left"
-          className="flex flex-col space-y-8 text-center md:text-left"
+          className="flex md:col-span-2  lg:col-span-1 flex-col md:flex-row lg:flex-col lg:gap-0 md:gap-5  space-y-8 text-center md:items-center md:text-left"
         >
-          {/* Years Experience */}
-          <div>
-            <h2 className="text-sm uppercase font-semibold text-gray-500 mb-2">
-              Years
-            </h2>
-            <p className="text-6xl md:text-7xl font-bold text-gray-900 leading-none">
-              0
-            </p>
-            <p className="text-sm uppercase font-semibold text-gray-500 mt-1">
-              Experience
-            </p>
-          </div>
+          <div className="flex flex-col gap-5">
+            {/* Years Experience */}
+            <div>
+              <h2 className="text-sm uppercase font-semibold text-gray-500 mb-2">
+                Years
+              </h2>
+              <p className="text-6xl md:text-7xl font-bold text-gray-900 leading-none">
+                0
+              </p>
+              <p className="text-sm uppercase font-semibold text-gray-500 mt-1">
+                Experience
+              </p>
+            </div>
 
-          {/* Design Quote */}
-          <div
-            style={{
-              background: "rgba(0, 0, 0, 0.1)",
-              borderRadius: "16px",
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-              backdropFilter: "blur(4.8px)",
-              WebkitBackdropFilter: "blur(4.8px)",
-            }}
-            className=" p-4 rounded-lg shadow-sm"
-          >
-            <p className="italic text-black text-sm">
-              "Eager to Learn, Passionate to Build, Ready to Grow."
-            </p>
-          </div>
-
-          {/* Placeholder for Any Recognition or Motivational Note */}
-          <div className="flex items-center justify-center md:justify-start space-x-4">
+            {/* Design Quote */}
             <div
               style={{
-                background: "rgba(0, 0, 0, 0.16)",
+                background: "rgba(0, 0, 0, 0.1)",
                 borderRadius: "16px",
                 boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
                 backdropFilter: "blur(4.8px)",
                 WebkitBackdropFilter: "blur(4.8px)",
               }}
-              className="w-10 h-10 flex items-center justify-center text-xl font-bold hover:-rotate-45 hover:scale-110 transition  duration-300 border border-gray-300 rounded-md"
+              className=" p-4 rounded-lg shadow-sm"
             >
-              🚀
+              <p className="italic text-black text-sm">
+                "Eager to Learn, Passionate to Build, Ready to Grow."
+              </p>
             </div>
-            <p className="text-sm text-gray-600 max-w-xs">
-              Committed to continuous learning and growth
-            </p>
           </div>
 
-          {/* Projects Completed */}
-          <div>
-            <h2 className="text-sm uppercase font-semibold text-gray-500 mb-2">
-              Projects
-            </h2>
-            <p className="text-6xl md:text-7xl font-bold text-gray-900 leading-none">
-              3
-            </p>
-            <p className="text-sm uppercase font-semibold text-gray-500 mt-1">
-              Completed (Personal & Academic)
-            </p>
+          {/* Placeholder for Any Recognition or Motivational Note */}
+          <div className="flex flex-col">
+            <div className="flex items-center justify-center md:justify-start space-x-4">
+              <div
+                style={{
+                  background: "rgba(0, 0, 0, 0.16)",
+                  borderRadius: "16px",
+                  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                  backdropFilter: "blur(4.8px)",
+                  WebkitBackdropFilter: "blur(4.8px)",
+                }}
+                className="w-10 h-10 flex items-center justify-center text-xl font-bold hover:-rotate-45 hover:scale-110 transition  duration-300 border border-gray-300 rounded-md"
+              >
+                🚀
+              </div>
+              <p className="text-sm text-gray-600 max-w-xs">
+                Committed to continuous learning and growth
+              </p>
+            </div>
+
+            {/* Projects Completed */}
+            <div>
+              <h2 className="text-sm uppercase font-semibold text-gray-500 mb-2">
+                Projects
+              </h2>
+              <p className="text-6xl md:text-7xl font-bold text-gray-900 leading-none">
+                3
+              </p>
+              <p className="text-sm uppercase font-semibold text-gray-500 mt-1">
+                Completed (Personal & Academic)
+              </p>
+            </div>
           </div>
         </div>
       </div>
