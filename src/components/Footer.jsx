@@ -1,5 +1,7 @@
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import logo from "../../public/logo.png";
+import { TbBrandGithubFilled } from "react-icons/tb";
+import { IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io";
 const Footer = () => {
   return (
     <footer className="footer   z-20 sm:footer-horizontal flex justify-around bg-neutral items-center text-neutral-content p-10">
@@ -16,40 +18,43 @@ const Footer = () => {
         </p>
       </aside>
 
-      
       <nav>
         <h6 className="footer-title">Social</h6>
-        <div className="grid grid-flow-col gap-4 text-2xl">
+        <div className="flex justify-center md:justify-start space-x-3">
+          {/* GitHub */}
+          <a
+            href="https://github.com/abuhanifsagor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2.5 hover:bg-[#d7d7d7] duration-200 cursor-pointer rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-md"
+            aria-label="GitHub"
+          >
+            <TbBrandGithubFilled size={25} />
+          </a>
+
+          {/* LinkedIn */}
           <a
             href="https://linkedin.com/in/your-profile"
             target="_blank"
             rel="noopener noreferrer"
+            className="p-2.5 hover:bg-[#d7d7d7] duration-200 cursor-pointer rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-md"
             aria-label="LinkedIn"
-            className="hover:text-blue-500 transition-colors duration-200"
           >
-            <FaLinkedin />
+            <IoLogoLinkedin size={25} />
           </a>
 
+          {/* WhatsApp */}
           <a
-            href="https://github.com/your-username"
+            href="https://wa.me/+8801301070806"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="hover:text-gray-700 transition-colors duration-200"
+            className="p-2.5 hover:bg-[#d7d7d7] duration-200 cursor-pointer rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-md"
+            aria-label="WhatsApp"
           >
-            <FaGithub />
-          </a>
-
-          <a
-            href="mailto:youremail@example.com"
-            aria-label="Email"
-            className="hover:text-red-500 transition-colors duration-200"
-          >
-            <FaEnvelope />
+            <IoLogoWhatsapp size={25} />
           </a>
         </div>
       </nav>
-      
     </footer>
   );
 };

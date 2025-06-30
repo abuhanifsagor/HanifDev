@@ -62,7 +62,7 @@ const LatestProjects = () => {
             {projects ? (
               <div className="text-center ">
                 <Link
-                  to="/projects"
+                  to="/"
                   className="flex mx-auto w-35 btn bg-[#5798ff] text-white items-center justify-center gap-2"
                 >
                   <IoCodeSlash size={20} />

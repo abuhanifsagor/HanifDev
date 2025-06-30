@@ -1,50 +1,60 @@
 [
   {
     "id": 1,
-    "title": "E-commerce Web App",
-    "image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg",
-    "shortDescription": "A full-stack e-commerce platform with user authentication, product catalog, and secure checkout features.",
+    "title": "Henri – Restaurant Management",
+    "image": "https://i.ibb.co/Ngj3Zc1g/image.png",
+    "shortDescription": "Henri is a full-stack Restaurant Management Website designed to offer a seamless and engaging experience for customers while empowering staff with efficient management tools. Built with the MERN stack, this platform allows users to explore food items, place orders, manage their own contributions, and interact with the system through a responsive and intuitive user interface.",
     "features": [
-      "User authentication & authorization (JWT)",
-      "Product filtering, sorting, and search",
-      "Dynamic shopping cart and secure checkout",
-      "Admin dashboard for product management"
+      "Food Management (CRUD): Users can add, view, update, and delete their own food items",
+      "Food Ordering System with quantity checks and owner restrictions",
+      "Order History: Users can view and delete their past orders"
     ],
-    "techStack": ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Firebase"],
-    "liveLink": "https://example.com/ecommerce",
-    "repoLink": "https://github.com/yourusername/ecommerce-client",
-    "detailsLink": "/projects/ecommerce-details"
+    "techStack": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase",
+      "Tailwind CSS"
+    ],
+    "liveLink": "https://henri-app.netlify.app/",
+    "repoLink": "https://github.com/Programming-Hero-Web-Course4/b11a11-client-side-abuhanifsagor"
   },
+
   {
     "id": 2,
-    "title": "Task Management Tool",
-    "image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg",
-    "shortDescription": "A responsive and intuitive web application designed for personal and team task management.",
+    "title": "Free.io – Freelance Task Marketplace",
+    "image": "https://i.ibb.co/5x5cwDrT/image.png",
+    "shortDescription": "Free.io is a full-stack freelance task marketplace. It allows users to post tasks, bid on freelance work, and interact through comments and task updates. The platform emphasizes real-world functionality with protected routes, authentication, responsive UI, and a smooth user experience.",
     "features": [
-      "Create, edit, and delete tasks",
-      "Task categorization and priority setting",
-      "Drag-and-drop task reordering",
-      "Real-time updates with websockets"
+      "Add, View, Update, Delete Tasks (CRUD)",
+      "Task Bidding System with bidsCount tracking",
+      "Comment System with like functionality"
     ],
-    "techStack": ["HTML", "CSS", "JavaScript", "React", "Firebase"],
-    "liveLink": "https://example.com/task-manager",
-    "repoLink": "https://github.com/yourusername/task-manager-client",
-    "detailsLink": "/projects/task-manager-details"
+    "techStack": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase",
+      "Tailwind CSS"
+    ],
+    "liveLink": "https://freeio-app.netlify.app/",
+    "repoLink": "https://github.com/Programming-Hero-Web-Course4/b11a10-client-side-abuhanifsagor"
   },
+
   {
     "id": 3,
-    "title": "Personal Blog Platform",
-    "image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg",
-    "shortDescription": "A modern blog platform for content creators to publish articles and interact with readers.",
+    "title": "Zentrys – Metagame Layer Demo",
+    "image": "https://i.ibb.co/VWT5dzLF/image.png",
+    "shortDescription": "Zentrys is a demo website showcasing the concept of a unified metagame layer integrating AI, blockchain, and gaming. It presents core features such as token economy, agentic AI, and cross-platform engagement with a modern and responsive UI.",
     "features": [
-      "Rich text editor for posts",
-      "User comments and likes",
-      "Search functionality for articles",
-      "Responsive design for all devices"
+      "Unified gaming ecosystem demo integrating Web2 & Web3",
+      "Agentic AI assistant concept implementation",
+      "Token economy visualization and interactive UI"
     ],
-    "techStack": ["Next.js", "GraphQL", "PostgreSQL", "Tailwind CSS", "Vercel"],
-    "liveLink": "https://example.com/blog-platform",
-    "repoLink": "https://github.com/yourusername/blog-platform-client",
-    "detailsLink": "/projects/blog-platform-details"
+    "techStack": ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    "liveLink": "https://abuhanifsagor.github.io/zentrys/",
+    "repoLink": "https://github.com/abuhanifsagor/zentrys"
   }
 ]

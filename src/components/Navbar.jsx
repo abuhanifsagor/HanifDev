@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../public/logo.png";
+import cv from   "../../public/Abu_hanif_Sagor.pdf"
 
 import { Menu, X } from "lucide-react";
 
@@ -72,8 +73,8 @@ const Navbar = () => {
           <NavLink to="/" className={getNavLinkClass}>
             Home
           </NavLink>
-          <NavLink to="/projects" className={getNavLinkClass}>
-            Projects
+          <NavLink to="/about" className={getNavLinkClass}>
+            About
           </NavLink>
           <NavLink to="/Contact" className={getNavLinkClass}>
             Contact
@@ -88,7 +89,8 @@ const Navbar = () => {
         {/* Desktop Resume Button */}
         <div className="hidden md:flex md:items-center md:ml-auto">
           <a
-            href="#"
+            href={cv}
+            download
             className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200 shadow-md"
           >
             Resume
@@ -102,7 +104,14 @@ const Navbar = () => {
           } w-full`}
         >
           <div className="flex  border-gray-200 flex-col items-center space-y-2">
-             <div className="divider w-50 mb-0 -mt-2 mx-auto"> </div>
+            <div className="divider w-50 mb-0 -mt-2 mx-auto"> </div>
+            <NavLink
+              to="/"
+              className={getMobileNavLinkClass}
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </NavLink>
             <NavLink
               to="/about"
               className={getMobileNavLinkClass}
@@ -111,30 +120,18 @@ const Navbar = () => {
               About
             </NavLink>
             <NavLink
-              to="/services"
+              to="/contact"
               className={getMobileNavLinkClass}
               onClick={() => setIsOpen(false)}
             >
-              Services
-            </NavLink>
-            <NavLink
-              to="/portfolio"
-              className={getMobileNavLinkClass}
-              onClick={() => setIsOpen(false)}
-            >
-              Portfolio
-            </NavLink>
-            <NavLink
-              to="/testimonial"
-              className={getMobileNavLinkClass}
-              onClick={() => setIsOpen(false)}
-            >
-              Testimonial
+              Contact
             </NavLink>
 
             <div className="flex flex-col items-center mt-4 w-full px-4 space-y-2">
               <a
-                href="#_"
+                href={cv}
+                download
+                target="_blank"
                 className="relative w-full inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-800"></span>

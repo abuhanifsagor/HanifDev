@@ -212,7 +212,7 @@ const PortfolioHero = () => {
             </div>
           </div>
 
-          {/* Placeholder for Any Recognition or Motivational Note */}
+  
           <div className="flex flex-col">
             <div className="flex items-center justify-center md:justify-start space-x-4">
               <div

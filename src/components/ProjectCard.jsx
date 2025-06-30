@@ -1,29 +1,28 @@
 import React from "react";
-// Import icons for buttons
 import {
   FaGithub,
   FaExternalLinkAlt,
   FaInfoCircle,
   FaEye,
 } from "react-icons/fa";
-import { PiEyeClosedDuotone, PiGithubLogoDuotone, PiInfoDuotone } from "react-icons/pi";
+import {
+  PiEyeClosedDuotone,
+  PiGithubLogoDuotone,
+  PiInfoDuotone,
+} from "react-icons/pi";
 
 import TiltedCard from "./bits/TiltedCard";
+import { Link } from "react-router";
 
 const ProjectCard = ({ project, index }) => {
-  const accentBlue = "#3b82f6";
-
   return (
     <div
       id="card"
-      className={`
-        flex flex-col
-        ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} 
-         rounded-lg shadow-xl  mb-12
-        border border-gray-200
-      `}
+      className={`flex flex-col ${
+        index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+      } rounded-lg shadow-xl mb-12 border border-gray-200`}
     >
-      {/* Project Image Section */}
+      {/* Project Image */}
       <div className="md:w-1/2 p-4 hidden md:block w-full flex-shrink-0">
         <TiltedCard
           imageSrc={project.image}
@@ -40,22 +39,22 @@ const ProjectCard = ({ project, index }) => {
           displayOverlayContent={true}
         />
       </div>
-      <div className="md:w-1/2 md:hidden p-4 w-full flex-shrink-0">
+      <div className="md:w-1/2  md:hidden p-4 w-full flex-shrink-0">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full hover:scale-102 duration-300 object-cover rounded-lg "
+          className="w-full h-full hover:scale-102 duration-300 object-cover rounded-lg"
         />
       </div>
 
-      {/* Project Content Section */}
+      {/* Project Content */}
       <div className="md:w-1/2 w-full p-6 sm:p-8 flex flex-col justify-between">
         <div>
           <h3 className="text-2xl font-bold text-gray-900 mb-3">
             {project.title}
           </h3>
           <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-            {project.shortDescription}
+            {project.shortDescription.substring(0, 160)}.
           </p>
 
           {/* Key Features */}
@@ -68,7 +67,7 @@ const ProjectCard = ({ project, index }) => {
             ))}
           </ul>
 
-          {/* Tools & Frameworks Badges */}
+          {/* Tech Stack */}
           <h4 className="text-base font-semibold text-gray-800 mb-2">
             Tech Stack:
           </h4>
@@ -76,10 +75,7 @@ const ProjectCard = ({ project, index }) => {
             {project.techStack.map((tech, i) => (
               <span
                 key={i}
-                className={`
-                  inline-flex items-center px-3 py-1 rounded-full bg-gray-200   text-sm font-medium
-                  }
-                `}
+                className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-sm font-medium"
               >
                 #{tech}
               </span>
@@ -87,29 +83,25 @@ const ProjectCard = ({ project, index }) => {
           </div>
         </div>
 
-        {/* Action Buttons */}
+        {/* Buttons */}
         <div className="flex flex-wrap gap-3 mt-auto pt-4 border-t items-center lg:justify-start justify-center border-gray-100">
           {project.liveLink && (
             <a
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn relative flex items-center gap-2 px-5 py-2 rounded-lg text-white font-semibold shadow-md transition-all duration-300 group
-              bg-green-600 hover:bg-green-700"
-
-              
+              className="btn relative flex items-center gap-2 px-5 py-2 rounded-lg text-white font-semibold shadow-md transition-all duration-300 group bg-green-600 hover:bg-green-700"
             >
               <span className="absolute left-4 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
                 <PiEyeClosedDuotone />
               </span>
-
               <span className="absolute left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <FaEye />
               </span>
-
               <span className="pl-6">Live</span>
             </a>
           )}
+
           {project.repoLink && (
             <a
               href={project.repoLink}
@@ -120,30 +112,25 @@ const ProjectCard = ({ project, index }) => {
               <span className="absolute left-4 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
                 <PiGithubLogoDuotone />
               </span>
-
               <span className="absolute left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <FaGithub />
               </span>
-
               <span className="pl-6">GitHub</span>
             </a>
           )}
-          {project.detailsLink && (
-            <a
-              href={project.detailsLink}
-              className="btn relative flex items-center gap-2 px-5 py-2 rounded-lg bg-gray-200 text-gray-800 font-semibold shadow-md hover:bg-gray-300 transition-colors duration-300 group"
-            >
-              <span className="absolute left-4 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-                <PiInfoDuotone />
-              </span>
 
-              <span className="absolute left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <FaInfoCircle />
-              </span>
-
-              <span className="pl-6">Details</span>
-            </a>
-          )}
+          <Link
+            to={`/projects/${project.id}`}
+            className="btn relative flex items-center gap-2 px-5 py-2 rounded-lg bg-gray-200 text-gray-800 font-semibold shadow-md hover:bg-gray-300 transition-colors duration-300 group"
+          >
+            <span className="absolute left-4 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+              <PiInfoDuotone />
+            </span>
+            <span className="absolute left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <FaInfoCircle />
+            </span>
+            <span className="pl-6">Details</span>
+          </Link>
         </div>
       </div>
     </div>
