@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce Web App",
+    "image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg",
+    "shortDescription": "A full-stack e-commerce platform with user authentication, product catalog, and secure checkout features.",
+    "features": [
+      "User authentication & authorization (JWT)",
+      "Product filtering, sorting, and search",
+      "Dynamic shopping cart and secure checkout",
+      "Admin dashboard for product management"
+    ],
+    "techStack": ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Firebase"],
+    "liveLink": "https://example.com/ecommerce",
+    "repoLink": "https://github.com/yourusername/ecommerce-client",
+    "detailsLink": "/projects/ecommerce-details"
+  },
+  {
+    "id": 2,
+    "title": "Task Management Tool",
+    "image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg",
+    "shortDescription": "A responsive and intuitive web application designed for personal and team task management.",
+    "features": [
+      "Create, edit, and delete tasks",
+      "Task categorization and priority setting",
+      "Drag-and-drop task reordering",
+      "Real-time updates with websockets"
+    ],
+    "techStack": ["HTML", "CSS", "JavaScript", "React", "Firebase"],
+    "liveLink": "https://example.com/task-manager",
+    "repoLink": "https://github.com/yourusername/task-manager-client",
+    "detailsLink": "/projects/task-manager-details"
+  },
+  {
+    "id": 3,
+    "title": "Personal Blog Platform",
+    "image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg",
+    "shortDescription": "A modern blog platform for content creators to publish articles and interact with readers.",
+    "features": [
+      "Rich text editor for posts",
+      "User comments and likes",
+      "Search functionality for articles",
+      "Responsive design for all devices"
+    ],
+    "techStack": ["Next.js", "GraphQL", "PostgreSQL", "Tailwind CSS", "Vercel"],
+    "liveLink": "https://example.com/blog-platform",
+    "repoLink": "https://github.com/yourusername/blog-platform-client",
+    "detailsLink": "/projects/blog-platform-details"
+  }
+]

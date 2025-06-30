@@ -6,7 +6,10 @@ import PortfolioHero from "./PortfolioHero";
 const Hero = () => {
   return (
     <div className="pt-12 text-center font-semibold text-gray-800">
-      <h1 data-aos="zoom-in" className="text-lg font-bold md:text-3xl md:font-semibold md:leading-tight text-center space-y-3">
+      <h1
+        data-aos="zoom-in"
+        className="text-lg font-bold md:text-3xl md:font-semibold md:leading-tight text-center space-y-3"
+      >
         {/* Line 1 */}
         <p className="flex items-center justify-center gap-2">
           <TbSparkles className="text-purple-500 animate-pulse" size={28} />
