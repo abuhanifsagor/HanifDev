@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"; // Import useState
 import ProjectCard from "./ProjectCard";
+import { IoCodeSlash } from "react-icons/io5";
+import { Link } from "react-router";
 
 const LatestProjects = () => {
   const [projects, setProjects] = useState([]); // State to hold fetched projects
@@ -28,44 +30,52 @@ const LatestProjects = () => {
     };
 
     fetchProjects();
-  }, []); 
+  }, []);
 
   return (
-    <div className="pt-15 relative min-h-[60vh]">
+    <div className="pt-15 relative min-h-[50vh] ">
       <div>
-        
-        <h1  id="title" className="text-2xl sticky top-18 pt-2 shadow-base-300 z-10  pb-12 font-bold md:text-3xl md:font-semibold md:leading-tight text-center space-y-3">
-         <span data-aos="fade-up">Latest Projects</span>
+        <h1
+          id="title"
+          className="text-2xl  pt-2 shadow-base-300 z-10  pb-12 font-bold md:text-3xl md:font-semibold md:leading-tight text-center space-y-3"
+        >
+          <span data-aos="fade-up">Latest Projects</span>
         </h1>
 
         {loading && (
           <div className="text-center text-xl text-gray-700 mt-10">
-            Loading projects...
             <div className="mt-4 animate-spin rounded-full h-8 w-8 border-b-2 border-accent-blue mx-auto"></div>
           </div>
         )}
 
         {error && (
-          <div className="text-center text-xl text-red-600 mt-10">
-            Error loading projects: {error}
-            <p className="text-gray-500 text-base mt-2">
-              Please try again later.
-            </p>
+          <div className="text-center flex items-center justify-center min-h-[40vh] text-xl text-red-600 ">
+            <span> Curently No Projects Available !</span>
           </div>
         )}
 
         {!loading && !error && projects.length > 0 && (
-          <div className="grid grid-cols-1 gap-4">
-            {" "}
+          <div className="grid grid-cols-1 gap-4 ">
             {projects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
+            {projects ? (
+              <div className="text-center ">
+                <Link
+                  to="/projects"
+                  className="flex mx-auto w-35 btn bg-[#5798ff] text-white items-center justify-center gap-2"
+                >
+                  <IoCodeSlash size={20} />
+                  <span>see more</span>
+                </Link>
+              </div>
+            ) : null}
           </div>
         )}
 
         {!loading && !error && projects.length === 0 && (
-          <div className="text-center text-xl text-gray-700 mt-10">
-            No projects found.
+          <div className="text-center flex items-center justify-center min-h-[40vh] text-xl text-gray-800 ">
+            <span> No projects found.</span>
           </div>
         )}
       </div>

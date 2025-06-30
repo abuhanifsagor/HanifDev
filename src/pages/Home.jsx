@@ -3,11 +3,11 @@ import Particles from "../components/bits/Particles";
 import Hero from "../components/Hero";
 import LatestProjects from "../components/LatestProjects";
 import Skill from "../components/skill";
+import Education from "../components/Education";
 
 const Home = () => (
   <div className="relative">
-    {/* Fullscreen Background Particles */}
-    <div className="fixed inset-0 ">
+    <div className="fixed inset-0 z-0 ">
       <Particles
         particleColors={["#3b82f6", "#3b82f6"]}
         particleCount={350}
@@ -25,6 +25,7 @@ const Home = () => (
       <Hero />
       <Skill />
       <LatestProjects />
+      <Education></Education>
     </div>
   </div>
 );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../public/logo.png";
 
 import { Menu, X } from "lucide-react";
@@ -50,12 +50,12 @@ const Navbar = () => {
   return (
     <nav
       className={`w-full fixed top-0 z-50 p-4 rounded-b-lg transition-colors duration-300 ${
-        scrolled ? "bg-white shadow-md" : "bg-[#f5f5f5]"
+        scrolled ? "bg-white shadow-md " : "bg-[#f5f5f5]"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between flex-wrap relative">
         {/* Mobile Top Bar */}
-        <div className="w-full flex items-center justify-between md:hidden">
+        <div className="w-full flex b items-center justify-between  md:hidden">
           <Logo />
 
           <button
@@ -101,7 +101,8 @@ const Navbar = () => {
             isOpen ? "max-h-screen mt-4" : "max-h-0"
           } w-full`}
         >
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex  border-gray-200 flex-col items-center space-y-2">
+             <div className="divider w-50 mb-0 -mt-2 mx-auto"> </div>
             <NavLink
               to="/about"
               className={getMobileNavLinkClass}
